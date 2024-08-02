@@ -1,4 +1,3 @@
-'use client'
 import React from 'react'
 import { ArrowUpIcon } from '@heroicons/react/24/solid'
 import Headder from "@/components/Headder";
@@ -16,6 +15,7 @@ import { fetchPageInfo } from '@/utils/fetchPageInfo';
 import { fetchProject } from '@/utils/fetchProjects';
 import { fetchSocials } from '@/utils/fetchSocials';
 import { fetchExperiences } from '@/utils/fetchExperiences';
+import Head from 'next/head';
 
 type Props = {
   pageInfo: PageInfo;
@@ -28,7 +28,6 @@ type Props = {
 export default function Home({pageInfo, socials, projects, skills, experiences}: Props) {
   return (
     <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar-thumb-rounded scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#bd4aff]/80">
-      
       {/* Headder */}
       <Headder 
       socials={socials}
